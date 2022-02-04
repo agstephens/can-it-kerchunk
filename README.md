@@ -2,6 +2,11 @@
 
 Testing kerchunk with some of our data and services
 
+## TO-DOs
+
+- [ ] Get cf-decoding of times to work - probably just involves passing through kwargs.
+- [ ] Need to do a comparison of metadata, bounds, coordinates and values between original and new data.
+
 ## Initial test:
 
 ### With single NetCDF file

@@ -1,0 +1,4 @@
+fsspec
+kerchunk
+xarray
+git+https://github.com/cedadev/jos.git
