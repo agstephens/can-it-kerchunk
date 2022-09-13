@@ -2,11 +2,6 @@
 
 Testing kerchunk with some of our data and services
 
-## TO-DOs
-
-- [ ] Get cf-decoding of times to work - probably just involves passing through kwargs.
-- [ ] Need to do a comparison of metadata, bounds, coordinates and values between original and new data.
-
 ## Initial test:
 
 ### With single NetCDF file
@@ -37,4 +32,5 @@ jos put -s http://cmip6-zarr-o.s3.jc.rl.ac.uk/ -c ~/.credentials/caringo-credent
 read-kerchunk-multiple.py
 ```
 
+**NOTE: in recent updates to the kerchunk library, it is (probably) now possible to create the aggregated file in one step.**
 
