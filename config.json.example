@@ -1,0 +1,5 @@
+{
+    "url": "http://cmip6-zarr-o.s3.jc.rl.ac.uk",
+    "accessKey": "keykeykey",
+    "secretKey": "secretsecretsecret"
+}

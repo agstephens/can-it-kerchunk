@@ -1,4 +1,8 @@
 fsspec
 kerchunk
 xarray
-git+https://github.com/cedadev/jos.git
+h5py
+minio
+requests
+aiohttp
+s3fs
