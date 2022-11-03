@@ -17,7 +17,7 @@ fssopts = {
 
 set_configs.setup_configs(config["accessKey"], config["secretKey"], config["url"])
 
-for key in ("AWS_CONFIG_FILE", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
+for key in ("AWS_ACCESS_KEY_ID", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
 print("HAVE TO SET CONFIG BEFORE IMPORTING xarray??????")
 
 import xarray as xr
@@ -33,15 +33,15 @@ s3fs  = s3fs.S3FileSystem(**fssopts)
 ref = s3fs.open(ref)
 
 
-for key in ("AWS_CONFIG_FILE", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
+for key in ("AWS_ACCESS_KEY_ID", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
 
 mapper = fsspec.get_mapper('reference://', fo=ref, target_protocol="http", 
                            **fssopts)
-for key in ("AWS_CONFIG_FILE", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
+for key in ("AWS_ACCESS_KEY_ID", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
 
 ds = xr.open_zarr(mapper) #, **fssopts) #, backend_kwargs={'consolidated': False})
 
-for key in ("AWS_CONFIG_FILE", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
+for key in ("AWS_ACCESS_KEY_ID", "FSSPEC_CONFIG_DIR"): print(f"{key} -> {os.environ[key]}")
 
 
 subset = ds.sel(time=slice("1855-01-01", "1856-01-01"), lat=slice(20, 40), lon=slice(20, 40))
