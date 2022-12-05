@@ -1,3 +1,12 @@
+# All our thinking on this issue can now be found at:
+
+https://github.com/cedadev/kerchunk-tools
+
+Things are gradually getting clearer :-)
+
+
+
+
 # can-it-kerchunk
 
 Testing kerchunk with some of our data and services
